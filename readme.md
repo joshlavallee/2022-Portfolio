@@ -1,8 +1,8 @@
-# THREE JS STARTER FILE 
+# JOSH LAVALLEE 2022 THREE PORTFOLIO
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+Run the following commands:
 
 ``` bash
 # Install dependencies (only the first time)
