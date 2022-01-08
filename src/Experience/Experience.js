@@ -42,6 +42,7 @@ class Experience {
     update() {
         this.camera.update()
         this.renderer.update()
+        this.world.update()
     }
 }
 
