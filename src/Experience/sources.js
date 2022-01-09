@@ -10,5 +10,17 @@ export default [
             'textures/environmentMap/pz.jpg',
             'textures/environmentMap/nz.jpg',
         ]
+    },
+    {
+        name: 'gameboyModel',
+        type: 'gltfModel',
+        path: 'models/yellow_gameboy/scene.gltf'
+    },
+    {
+        name: 'bridgeTexture',
+        type: 'texture',
+        path: [
+            'textures/photos/bridge.jpg',
+        ]
     }
 ]

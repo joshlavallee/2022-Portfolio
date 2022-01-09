@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import Experience from "../Experience"
 import Environment from './Environment'
-import { Box } from './Meshes'
+import { Box, Gameboy } from './Meshes'
 
 class World {
     constructor() {
@@ -16,6 +16,7 @@ class World {
 
         this.resources.on('ready', () => {
             this.environment = new Environment()
+            this.gameboy = new Gameboy()
         })
 
 
@@ -26,9 +27,14 @@ class World {
         this.box.instance.rotation.x += .001
         this.box.instance.rotation.y += .001
         this.box.instance.rotation.z += .001
-        this.box2.instance.rotation.x += -.002
-        this.box2.instance.rotation.y += -.002
-        this.box2.instance.rotation.z += -.002
+        this.box2.instance.rotation.x += -.001
+        this.box2.instance.rotation.y += -.001
+        this.box2.instance.rotation.z += -.001
+        this.box.instance.scale.y = Math.sin(this.box.instance.rotation.x)
+        this.box2.instance.scale.y = Math.sin(this.box2.instance.rotation.x)
+        if (this.gameboy) {
+            this.gameboy.update()
+        }
     }
 }
 
