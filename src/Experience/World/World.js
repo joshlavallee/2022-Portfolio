@@ -7,14 +7,19 @@ class World {
     constructor() {
         this.experience = new Experience()
         this.scene = this.experience.scene
+        this.resources = this.experience.resources
 
         this.box = new Box(1, 4, 1)
         this.box.instance.material.color.setHex(Math.random() * 0xffffff)
 
         this.box2 = new Box(1, 4, 1)
 
+        this.resources.on('ready', () => {
+            this.environment = new Environment()
+        })
 
-        this.environment = new Environment()
+
+
     }
 
     update() {
